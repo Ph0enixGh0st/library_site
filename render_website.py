@@ -1,6 +1,7 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import json
+import json, urllib
+
 
 env = Environment(
     loader=FileSystemLoader('.'),
