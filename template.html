@@ -14,7 +14,8 @@
   <body>
     <div class="container">
       <nav aria-label="Page navigation example">
-        <ul class="pagination">
+        <hr>
+        <ul class="pagination" style="margin:10px">
           {% if current_page == 1 %}
             <li class="page-item disabled">
           {% else %}
@@ -39,6 +40,7 @@
               <a class="page-link" href="../pages/index{{current_page+1}}.html">Вперед</a>
             </li>
         </ul>
+        <hr>
       </nav>
       <div class="row row-cols-2">
         {% for books in books_per_page: %}
