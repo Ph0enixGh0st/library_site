@@ -12,6 +12,7 @@ __pycache__/
 *.DS_Store
 distrib/
 books/
+pages/
 images/
 .Python
 build/
