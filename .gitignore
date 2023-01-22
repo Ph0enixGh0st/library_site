@@ -11,12 +11,8 @@ __pycache__/
 .DS_Store
 *.DS_Store
 distrib/
-books/
-pages/
-images/
 .Python
 build/
-media/
 develop-eggs/
 dist/
 downloads/
