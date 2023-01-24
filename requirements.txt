@@ -1,0 +1,10 @@
+flake8==6.0.0
+Jinja2==3.1.2
+livereload==2.6.3
+MarkupSafe==2.1.2
+mccabe==0.7.0
+more-itertools==9.0.0
+pycodestyle==2.10.0
+pyflakes==3.0.1
+six==1.16.0
+tornado==6.2
