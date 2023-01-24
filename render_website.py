@@ -1,6 +1,5 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
 from more_itertools import chunked
-from livereload import Server, shell
+from livereload import Server
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import json, urllib
 from pathlib import Path
