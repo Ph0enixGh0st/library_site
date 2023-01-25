@@ -18,7 +18,14 @@ pip install -r requirements.txt
 
 ## How to use.
 Given repository is already provided with some amount of predownloaded books.
-If you want to publish yours - please add them to "media/" folder.
+
+In case you want to download some other set of books - please use the following script: 
+[library_parser_2](https://github.com/Ph0enixGh0st/library_parser_2)
+
+
+
+
+
 
 Then run the following command:
 
