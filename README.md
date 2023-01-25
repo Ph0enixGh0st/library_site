@@ -35,6 +35,7 @@ Then run the following command:
 python render_website.py
 ```
 
+## Offline version.
 Offline version is available via opening 'index1.html' in pages directory. No script running is required.
 
 
