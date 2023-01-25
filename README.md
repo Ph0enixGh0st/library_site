@@ -22,8 +22,10 @@ Given repository is already provided with some amount of predownloaded books.
 In case you want to download some other set of books - please use the following script: 
 [library_parser_2](https://github.com/Ph0enixGh0st/library_parser_2)
 
-
-
+Then create '.env' file with this line:
+```
+BOOKS_REPOSITORY='{your file path here}.json'
+```
 
 
 
