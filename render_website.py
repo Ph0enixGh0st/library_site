@@ -43,7 +43,7 @@ def main():
     on_reload(template, books_repository)
 
     server = Server()
-    server.watch('template.html', on_reload(template))
+    server.watch('template.html', on_reload)
     server.serve(root='.', default_filename='pages/index1.html')
 
 
