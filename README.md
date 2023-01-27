@@ -35,6 +35,9 @@ Then run the following command:
 python render_website.py
 ```
 
+Library will be available here: http://127.0.0.1:5500/
+
+
 ## Offline version.
 Offline version is available via opening 'index1.html' in pages directory. No script running is required.
 
