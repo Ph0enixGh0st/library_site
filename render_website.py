@@ -1,12 +1,15 @@
-import json, os, urllib
+import json
+import os
+import urllib
+from pathlib import Path
+
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 from more_itertools import chunked
-from pathlib import Path
 
 
-def on_reload(template, books_repository='media/books_about.json'):
+def on_reload(template, books_repository):
     with open(books_repository, 'r', encoding='utf8') as json_file:
         books_descriptions = json.load(json_file)
 
@@ -32,18 +35,19 @@ def on_reload(template, books_repository='media/books_about.json'):
 def main():
 
     load_dotenv()
-    books_repository = os.environ['BOOKS_REPOSITORY']
-
+    books_repository = os.environ.setdefault('BOOKS_REPOSITORY', 'media/books_about.json')
+    print(books_repository)
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html', 'xml'])
     )
 
     template = env.get_template('template.html')
+
     on_reload(template, books_repository)
 
     server = Server()
-    server.watch('template.html', on_reload)
+    server.watch('*.html', on_reload)
     server.serve(root='.', default_filename='pages/index1.html')
 
 
