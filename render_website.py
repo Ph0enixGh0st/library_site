@@ -36,7 +36,7 @@ def main():
 
     load_dotenv()
     books_repository = os.environ.setdefault('BOOKS_REPOSITORY', 'media/books_about.json')
-    print(books_repository)
+
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html', 'xml'])
@@ -47,7 +47,7 @@ def main():
     on_reload(template, books_repository)
 
     server = Server()
-    server.watch('*.html', on_reload)
+    server.watch('*.html', on_reload(template, books_repository))
     server.serve(root='.', default_filename='pages/index1.html')
 
 
